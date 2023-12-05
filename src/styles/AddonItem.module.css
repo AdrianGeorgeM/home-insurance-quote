@@ -1,0 +1,67 @@
+.addonItem {
+  background-color: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 100%;
+  box-sizing: border-box; 
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.addonItem:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+.titleAndPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; 
+  margin-bottom: 10px; 
+}
+
+.addonTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  flex: 1; 
+}
+
+.addonPrice {
+  font-size: 18px;
+  color: #333;
+  margin-left: 10px; 
+}
+
+.addonText {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px; 
+}
+
+.selectButton {
+  padding: 10px 20px;
+  border: 1px solid #CCCCCC;
+  background-color: #9d9b9b;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  align-self: flex-end; 
+  width: fit-content; 
+  font-weight: bold;
+}
+
+.selected {
+  background-color: #4caf50; 
+  color: #FFFFFF;
+  border-color: #000000;
+}
+
+
+@media (max-width: 768px) {
+  .addonItem {
+   
+  }
+}

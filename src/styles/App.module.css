@@ -1,0 +1,33 @@
+.appContainer {
+  display: flex;
+  flex-direction: column; 
+ max-width: 1100px; 
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: space-between; 
+  margin-bottom: 20px; 
+}
+
+.addonsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 20px;
+  align-items: start; 
+}
+
+@media (max-width: 768px) {
+  .topContainer {
+    flex-direction: column; 
+  }
+  .addonsGrid {
+    grid-template-columns: 1fr; 
+  }
+  .selectButton {
+    width: 100%; 
+  }
+}
