@@ -49,11 +49,6 @@ function App() {
 			const addonPrice = isAnnual
 				? Math.round(selectedAddon.annualPrice * 100) / 100
 				: Math.round(selectedAddon.monthlyPrice * 100) / 100;
-			// console.log(
-			// 	`${selectedAddon.title} - £${addonPrice.toFixed(2)} per ${
-			// 		isAnnual ? 'year' : 'month'
-			// 	}`
-			// );
 
 			totalPrice += addonPrice;
 		});
@@ -84,6 +79,7 @@ function App() {
 						addon={addon}
 						onSelect={() => selectAddon(addon)}
 						onDeselect={() => deselectAddon(addon)}
+						isAnnual={isAnnual}
 					/>
 				))}
 			</div>

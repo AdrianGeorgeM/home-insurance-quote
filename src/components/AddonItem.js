@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from '../styles/AddonItem.module.css';
 
-function AddonItem({ addon, onSelect, onDeselect }) {
+function AddonItem({ addon, onSelect, onDeselect, isAnnual }) {
 	const [isSelected, setIsSelected] = useState(false);
 
 	const toggleSelection = () => {
@@ -16,7 +16,10 @@ function AddonItem({ addon, onSelect, onDeselect }) {
 		>
 			<div className={styles.titleAndPrice}>
 				<h3 className={styles.addonTitle}>{addon.title}</h3>
-				<p className={styles.addonPrice}>£{addon.monthlyPrice.toFixed(2)} per month</p>
+				<p className={styles.addonPrice}>
+					£{isAnnual ? addon.annualPrice.toFixed(2) : addon.monthlyPrice.toFixed(2)} per{' '}
+					{isAnnual ? 'year' : 'month'}
+				</p>
 			</div>
 			<p className={styles.addonText}>{addon.text}</p>
 			<button
